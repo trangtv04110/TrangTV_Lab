@@ -4,6 +4,8 @@
   "description": "The first line\r The second line",
   "main": "lab1.js",
   "dependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
     "string": "^3.1.1"
   },
   "devDependencies": {},

@@ -34,4 +34,14 @@ function reverse(str) {
 	console.log(arr.join(''));
 }
 //reverse("Tran Van Trang");
-reverse("");
+//reverse("");
+
+// User String module
+var S = require('string');
+var doesIt = S('my cool string').left(2).endsWith('y');
+console.log(doesIt);
+ 
+var phrase = S('JavaScript is the best scripting language ever!');
+var sub = 'best scripting';
+var pos = phrase.indexOf(sub);
+console.log(phrase.truncate(18).s);
