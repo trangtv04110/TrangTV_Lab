@@ -1,0 +1,23 @@
+{
+  "name": "TrangTV_Lab",
+  "version": "1.0.0",
+  "description": "The first line\r The second line",
+  "main": "lab1.js",
+  "dependencies": {
+    "string": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trangtv04110/TrangTV_Lab"
+  },
+  "author": "TrangTV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trangtv04110/TrangTV_Lab/issues"
+  },
+  "homepage": "https://github.com/trangtv04110/TrangTV_Lab"
+}
