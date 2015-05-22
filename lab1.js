@@ -1,4 +1,4 @@
-// Giải phương trình bậc 2
+// 1- Viết hàm giải phương trình bậc hai
 function GPTB2(a, b, c) {
 	if(typeof(a) == "number" && typeof(b) == "number" && typeof(c) == "number") {
 		if(a == 0) {
@@ -39,9 +39,41 @@ function reverse(str) {
 // User String module
 var S = require('string');
 var doesIt = S('my cool string').left(2).endsWith('y');
-console.log(doesIt);
+//console.log(doesIt);
  
 var phrase = S('JavaScript is the best scripting language ever!');
 var sub = 'best scripting';
 var pos = phrase.indexOf(sub);
-console.log(phrase.truncate(18).s);
+//console.log(phrase.truncate(18).s);
+
+//2- Cho vào một chuỗi string, hãy in ra từ và tần suất xuất hiện từ cao xuống thấp
+//3- Viết hàm mở rộng String (String.prototype.wordcount) để đếm số từ trong một chuỗi. Dùng Mocha, Chai để viết hàm kiểm thử.
+//Làm xong bài tập đẩy lên github, rồi nhắn riêng cho anh nhé.
+function wordcount(str) {
+	var words = [];
+	var arr = str.split(" ");
+	// count
+	for (var i = arr.length - 1; i >= 0; i--) {
+		if(arr[i].trim().length == 0) continue;
+		if(typeof(words[arr[i]]) == "number") {
+			words[arr[i]] += 1;
+		} else {
+			words[arr[i]] = 1;
+		}
+	}
+	// order
+	var arrNew = []; // an array of objects to return
+	for (word in words) {
+		arrNew.push({
+			text: word,
+			count: words[word]
+		});
+	}
+	console.log(arrNew);
+	arrNew.sort(function(a, b) {
+		return (a.count > b.count) ? -1 : ((a.count < b.count) ? 1 : 0);
+	});
+	console.log(arrNew);
+}
+wordcount("world hello  hello hello hello world");
+
