@@ -76,4 +76,3 @@ function wordcount(str) {
 	console.log(arrNew);
 }
 wordcount("world hello  hello hello hello world");
-
